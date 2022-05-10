@@ -6,7 +6,8 @@
 html,body{
     min-height: 100%;
     min-height: 100vh;
-    background-color: #9ace55;
+    background-color: #6ba124;
+    overflow: hidden;
     font-family: 'Press Start 2P', cursive;
 }
 .body {
@@ -14,24 +15,23 @@ html,body{
     margin:2px;
     width:100%;
     height:100%;
+    cursor: none;
 
 }
 
-#timer {
-    margin-top:5%;
-    text-align: center;
-}
 
 #timerDiv {
-    margin-top:5%;
+    display: flex;
+    top: 6%;
     text-align:left;
-    margin-left: 3%;
-}
-
-#Score {
-    margin-top: 1%;
-    text-align:left;
-    margin-left: 3%;
+    left: 4%;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:6px;
+    position: absolute;
+    transform: translate(-5%,-5%);
+    border: 1px ;
 }
 
 #holes {
@@ -43,8 +43,9 @@ html,body{
     left: 50%;
     width:678px;
     height:638px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     transform: translate(-50%, -50%);
+    /* cursor: none; */
 
 }
 
@@ -52,27 +53,14 @@ html,body{
     position: relative;
     height: 110px;
     width: 160px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 50%;
     background-color: #663009;
     box-shadow:0 0 10px hsl(25, 73%, 61%) inset;
-}
-
-
-#button_div {
-    margin-top: 480px;
-    text-align: center;
-    
-}
-#start_button {
-    position:relative;
-    bottom:0%;
-    text-align: center;
-    border: 2px solid yellow;
-    font-family: 'Press Start 2P', cursive;
-    text-shadow: yellowgreen;
-    
-}
+    overflow: hidden;
+    pointer-events: none;
+    /* cursor: none; */
+} 
 
 #music {
     margin-left: 92%;
@@ -92,9 +80,139 @@ html,body{
 
 .pile {
     position: absolute;
-    bottom: -20px;
-    left: -20px;
+    bottom: -4px;
+    left: -10px;
     width: 180px;
     object-fit: cover;
 
+}
+
+.mole {
+    position: absolute;
+    top: 110px;
+    left:0%;
+    width:155px;
+    object-fit: contain;
+    pointer-events: all;
+    cursor: pointer;
+    /* background-size: cover;
+    background: no-repeat scroll center center transparent;
+     */
+    
+}
+
+.startPage {
+    cursor: default;
+    position: absolute;
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #6ba124;
+    pointer-events: all;
+    z-index: 800;
+    text-align: center;
+    color: white;
+    
+}
+
+#startButton {
+    padding:1rem 1rem;
+    font-family: 'Press Start 2P', cursive;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease;
+    
+    
+}
+
+ #startButton:hover {
+    transition-duration: 0.2s;
+    background: rgba(255, 255, 255, 0.945);
+    color: green;
+}
+
+.display {
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.startPage h1 {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.5rem;
+}
+
+.startPage h2 {
+    visibility: hidden;
+    position: fixed;
+}
+
+.startPageClose {
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.highScore {
+    
+    animation: scorebump 0.7s ease infinite alternate;
+}
+
+.flash {
+    background: lightgreen;
+}
+
+.hammer {
+   
+    position: absolute;
+    height: 130px;
+    /* bring the layer to front*/
+    z-index: 20; 
+    top: 0%;
+    left: 0;
+    transform: translate(-20px,-30px);
+    pointer-events: none;
+     /* cursor: url(./img/hammer.png); */
+     /* z-index: -20; */
+
+}
+
+#backgroundMusic {
+    
+}
+
+@keyframes scorebump {
+    from {
+        transform: translateY(15px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes MolePopUp {
+    from {
+        transform: translateY(140px);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes MoleDown {
+    from {
+        transform: translateY(140px);
+    }
+    to {
+        transform: translateY(-100px);
+    }
 }
