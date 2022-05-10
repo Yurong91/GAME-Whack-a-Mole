@@ -33,7 +33,7 @@ for (let i=1; i<=16; i++) {
 
     // let pile= document.createElement('img');
     // pile.classList.add('pile');
-    // pile.src="./img/background.png";
+    // pile.src="background.png";
     // hole.appendChild(pile);
 
     let mole= document.createElement('img');
