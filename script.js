@@ -38,7 +38,7 @@ for (let i=1; i<=16; i++) {
 
     let mole= document.createElement('img');
     mole.classList.add('mole');
-    mole.src= "https://yurong91.github.io/GAME-Whack-a-Mole/mole.png";
+    mole.src= "mole.png";
     mole.setAttribute('name','mole');
     hole.appendChild(mole);
 
