@@ -21,9 +21,9 @@ let timeLeft = 20;
 let gameScore = 0;
 let maxScore = 0;
 
-let backgroundMusic = new Audio('./music/Game-background-music.mp3.mp3');
-let moleSound = new Audio('./music/ouch.mp3');
-let hammerSound = new Audio('./music/hammer2.wav');
+let backgroundMusic = new Audio('Game-background-music.mp3.mp3');
+let moleSound = new Audio('ouch.mp3');
+let hammerSound = new Audio('hammer2.wav');
 
 //=========MAKING HOLES AND MOLES=========//
 for (let i=1; i<=16; i++) {
